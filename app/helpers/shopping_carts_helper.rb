@@ -1,7 +1,7 @@
 module ShoppingCartsHelper
 
   def shopping_cart_how_many_tickets
-    console
+    #console
     return session[:shopping_cart].length if !session[:shopping_cart].nil?
     return 0
   end
