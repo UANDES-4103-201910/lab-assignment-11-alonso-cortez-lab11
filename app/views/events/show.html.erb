@@ -5,7 +5,11 @@
 <h2><%=@event.name%></h2>
 <p><%=@event.description%></p>
 <p><%=@event.start_date%></p>
-
+<% if @event.image.attached?%>
+  <image src = "<%=(url_for(@event.image))%>">
+<% else %>
+  <td>No image uploaded.</td>
+<% end %>
 <h3>About the event evenue</h3>
 
 <% if can? :create, Order %>
